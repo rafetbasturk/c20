@@ -1,0 +1,195 @@
+@include tablet {
+
+    html {
+        font-size: 11px;
+    }
+
+    header {
+        background: url(/dist/images/bg-hero-desktop.svg) no-repeat, color(pale-cyan);
+        background-size: contain;
+        padding: 4rem;
+
+        #logo img {
+            max-width: 15%;
+        }
+
+        section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0;
+    
+            div {
+                text-align: left;
+                max-width: 40%;
+    
+                a {
+                    text-align: center;
+                }
+            }
+    
+            img{
+                max-width: 55%;
+                margin-top: 0;
+            }
+    
+        }
+    }
+
+    main {
+        padding: 6rem 6rem 2rem;
+
+        article {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 4rem;
+            margin-bottom: 3rem;
+            &:nth-of-type(2) {
+                img {
+                    order: 1;
+                }
+
+                div {
+                    order: 2;
+                }
+            }
+    
+            div {
+                text-align: left;
+                width: 50%;
+            }
+    
+            img {
+                max-width: 40%;
+                order: 2;
+                margin: 0;
+            }
+        }
+    }
+
+    aside {
+        max-width: 50%;
+        margin: auto;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        padding: 12rem 6rem 6rem;
+        column-gap: 3rem;
+
+        img:first-of-type{
+            grid-column: 1 / -1;
+            width: 18%;
+        }
+
+        #contact {
+            grid-column: 1 / 8;
+
+            img {
+                grid-column: 1 / 2;
+            }
+        }
+
+        ul {
+            grid-column: 8 / 11;
+        }
+
+        li {
+            margin-top: 0;
+        }
+
+        #social-links {
+            grid-column: 11 / 13;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        div:last-of-type{
+            grid-column: 1 / -1;
+        }
+    }
+}
+
+@include laptop {
+    html {
+        font-size: 12.5px;
+    }
+
+    header {
+        padding: 4rem 8rem;
+
+        section h1 {
+            font-size: 3rem;
+        }
+    }
+
+    main {
+        padding: 12rem 10rem 6rem;
+
+        article {
+            padding: 4rem 2rem 4rem 10rem;
+        }
+    }
+
+    aside{
+        max-width: 60%;
+
+        h2 {
+            font-size: 2.8rem;
+        }
+
+        a {
+            font-size: 1.5rem;
+            padding: 2.5rem;
+            border-radius: 45px;
+            width: 50%;
+        }
+    }
+
+    footer {
+        padding: 12rem 10rem 5rem;
+
+        #contact {
+            grid-column: 1 / 5;
+            gap: 30px;
+            height: fit-content;
+            
+            p {
+                font-size: 1.2rem;
+            }
+        }
+
+        ul {
+            grid-column: 6 / 10;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            font-size: 1.4rem;
+
+            li {
+                &:nth-of-type(2) {
+                    grid-row: 2 / 3;
+                    grid-column: 1 / 2;
+                }
+
+                &:nth-of-type(3) {
+                    grid-row: 3 / 4;
+                    grid-column: 1 / 2;
+                }
+            }
+        }
+
+        #social-links {
+            grid-column: 10 / -1;
+            flex-direction: row;
+            justify-content: initial;
+        }
+
+        div:last-of-type{
+            text-align: right;
+            font-size: 1rem;
+        }
+    }
+}
