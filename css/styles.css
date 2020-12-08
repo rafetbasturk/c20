@@ -23,7 +23,7 @@ h1, h2 {
 }
 
 header {
-  background: url(/dist/images/bg-hero-mobile.svg) no-repeat, #ebfbff;
+  background: url(./images/bg-hero-mobile.svg) no-repeat, #ebfbff;
   background-size: contain;
   display: -ms-grid;
   display: grid;
@@ -275,7 +275,7 @@ footer div:last-of-type {
     font-size: 11px;
   }
   header {
-    background: url(/dist/images/bg-hero-desktop.svg) no-repeat, #ebfbff;
+    background: url(./images/bg-hero-desktop.svg) no-repeat, #ebfbff;
     background-size: contain;
     padding: 4rem;
   }
